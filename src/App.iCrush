@@ -14,7 +14,7 @@
                 </li>
                 <li onclick="window.location.href='https://github.com/AC-graph/lookview'" class='git-url'
                     title='lookview 源码'>
-                    Fork-me-on-Gitlib
+                    Fork-me-on-Github
                 </li>
             </ul>
         </nav>

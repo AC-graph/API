@@ -14,12 +14,13 @@
     "type": "git",
     "url": "git+https://github.com/AC-graph/API.git"
   },
+  "homepage": "http://yelloxing.gitee.io/lookview-api",
   "keywords": [
     "lookview",
     "api"
   ],
   "author": "心叶（yelloxing@gmail.com）",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",

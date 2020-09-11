@@ -8,10 +8,10 @@
   <a href="https://github.com/yelloxing/lookview/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/lookview.svg" alt="License"></a>
 </p>
 
-> 设计研发阶段
+> 请直接访问[在线地址](http://yelloxing.gitee.io/lookview-api/)查看！
 
 ## 开源协议
 
-[MIT](https://github.com/AC-graph/lookview/blob/master/LICENSE)
+[MIT](https://github.com/AC-graph/API/blob/master/LICENSE)
 
 Copyright (c) 2020 走一步 再走一步
