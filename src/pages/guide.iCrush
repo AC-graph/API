@@ -1,0 +1,67 @@
+<template>
+    <div class='root'>
+        <header>
+            lookview 官方文档
+            <span>研发中</span>
+            <p>
+                本项目绘图画笔由
+                <a href="https://yelloxing.gitee.io/image2d/index.html" target="_blank">image2D</a>
+                提供支持。
+            </p>
+        </header>
+        <div>
+
+        </div>
+    </div>
+</template>
+<script>
+    import changeActive from '../Service/changeActive.js';
+    export default {
+        data() {
+            return {
+                page: null
+            };
+        },
+        created() {
+            changeActive('menu-1', 'guide');
+        }
+    };
+</script>
+<style>
+    div.root {
+        background: #f6f8f8;
+        min-height: calc(100vh - .44rem);
+    }
+
+    div.root>header {
+        text-align: center;
+        font-size: .3rem;
+        line-height: 1.5em;
+        padding: .3rem 0;
+    }
+
+    div.root>header>span {
+        border: 1px solid gray;
+        background-color: white;
+        font-size: .12rem;
+        vertical-align: middle;
+        margin-left: .1rem;
+        padding: .03rem .06rem;
+        border-radius: .03rem;
+    }
+
+    div.root>header>p {
+        font-size: .16rem;
+    }
+
+    div.root>header>p>a {
+        color: #4078c0;
+    }
+
+    div.root>div {
+        background-color: #fff;
+        padding: .15rem .5rem;
+        min-height: calc(100vh - 2rem);
+        color: #3a585f;
+    }
+</style>

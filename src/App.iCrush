@@ -1,0 +1,103 @@
+<template>
+    <article>
+        <nav>
+            <span title='提供更友好的数据可视化解决方案'>lookview</span>
+            <ul>
+                <li title='首页' @click='openRouter("guide")' class='menu-1 guide'>
+                    首页
+                </li>
+                <li title='接口文档' @click='openRouter("api")' class='menu-1 api'>
+                    文档
+                </li>
+                <li title='使用教程' @click='openRouter("course")' class='menu-1 course'>
+                    教程
+                </li>
+                <li onclick="window.location.href='https://github.com/AC-graph/lookview'" class='git-url'
+                    title='lookview 源码'>
+                    Fork-me-on-Gitlib
+                </li>
+            </ul>
+        </nav>
+        <div>
+            <component :is='page' />
+        </div>
+    </article>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                page: null
+            };
+        },
+        mounted() {
+            this.loadRouter(page => this.page = page, 1);
+        },
+        methods: {
+            openRouter(pagename) {
+                this.goRouter(page => this.page = page, [pagename]);
+            }
+        }
+    };
+
+</script>
+<style>
+    article>nav {
+        line-height: .44rem;
+        height: .44rem;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
+        font-size: 0.2rem;
+        background-image: url(./assets/logo-100.png);
+        background-position: .2rem center;
+        background-size: 0.3rem auto;
+        background-repeat: no-repeat;
+        color: #711e32;
+        padding-left: .5rem;
+        position: fixed;
+        min-width: 100vw;
+        top: 0;
+        z-index: 1;
+    }
+
+    article>div {
+        padding-top: .44rem;
+    }
+
+    article>nav>span {
+        padding-left: .1rem;
+    }
+
+    article>nav>ul {
+        display: inline-block;
+        position: absolute;
+        right: .3rem;
+        top: 0;
+    }
+
+    article>nav>ul>li {
+        vertical-align: top;
+        display: inline-block;
+        color: #030303;
+        padding: 0 0.05rem;
+        font-size: 0.12rem;
+        cursor: pointer;
+        font-weight: bold;
+        height: 100%;
+    }
+
+    article>nav>ul>li[active='yes'] {
+        color: red;
+    }
+
+    article>nav>ul>li.git-url {
+        background-image: url(./assets/github.png);
+        font-size: 0;
+        width: 1rem;
+        background-size: 90% auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+</style>
