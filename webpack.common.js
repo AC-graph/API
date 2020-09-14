@@ -10,7 +10,7 @@ module.exports = {
     module: {
         rules: [{
             test: /\.iCrush$/,
-            loader: ['icrush-loader'],
+            loader: ['icrush-loader', require('path').join(__dirname, 'webpack/emoji-loader.js')],
             exclude: /node_modules/
         }, {
             test: /\.css$/,
