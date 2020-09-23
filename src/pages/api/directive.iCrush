@@ -1,0 +1,17 @@
+<template>
+  <div>
+    指令
+  </div>
+</template>
+<script>
+  import changeActive from '../../Service/changeActive.js';
+  import fixedScroll from '../../Service/fixedScroll.js';
+  export default {
+    created() {
+      changeActive('menu-2', 'directive');
+    },
+    mounted() {
+      fixedScroll(document.getElementById('api-id'), 44);
+    }
+  };
+</script>

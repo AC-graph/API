@@ -1,0 +1,94 @@
+.api-view {
+  width: 7rem;
+  margin: auto;
+  padding: .3rem 0;
+}
+
+.api-view>header {
+  font-size: .3rem;
+  padding: .3rem 0 .2rem 0;
+}
+
+.api-view>h2 {
+  font-size: .15rem;
+  line-height: 2em;
+  margin-top: .2rem;
+}
+
+.api-view>h2::before {
+  content: "#";
+  color: #711e32;
+}
+
+
+.api-view>h1 {
+  font-size: .16rem;
+  border-bottom: 1px solid gray;
+  padding: .1rem 0;
+  margin-top: .3rem;
+}
+
+.api-view>p {
+  line-height: 1.6em;
+  text-indent: 2em;
+  color: rgb(60, 57, 57);
+  font-weight: 400;
+  font-size: .14rem;
+  margin: .1rem 0;
+}
+
+.api-view .important {
+  color: red;
+  font-weight: 800;
+  padding: 0 10px;
+}
+
+.api-view a {
+  color: #711e32;
+  font-weight: 800;
+  text-decoration: underline;
+  padding: 0 10px;
+}
+
+.api-view>div {
+  position: relative;
+}
+
+.api-view>div>.copy-btn {
+  position: absolute;
+  right: .1rem;
+  top: .1rem;
+  background-color: #f8f8f8;
+  border: none;
+  outline: 0;
+  padding: .05rem .1rem;
+  transition: 0.2s;
+  font-size: .12rem;
+  cursor: pointer;
+}
+
+.api-view>div>.copy-btn:hover {
+  background-color: rgb(10, 10, 10);
+  color: white;
+}
+
+
+.api-view>div>pre {
+  font-family: cursive;
+  font-weight: 400;
+  font-size: 0.14rem;
+  padding: .15rem .2rem;
+  line-height: 1.6em;
+}
+
+
+.api-view>ul {
+  margin-left: .5rem;
+}
+
+.api-view>ul li {
+  list-style-type: disc;
+  line-height: 2em;
+  font-size: .13rem;
+  color: #000000;
+}

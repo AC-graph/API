@@ -3,7 +3,17 @@ const pages = {
         "content": () => import('../pages/guide.iCrush')
     },
     "api": {
-        "content": () => import('../pages/api/index.iCrush')
+        "content": () => import('../pages/api/index.iCrush'),
+        "object":{
+            "content": () => import('../Pages/api/object.iCrush')
+        },
+        "directive":{
+            "content": () => import('../Pages/api/directive.iCrush')
+        },
+        "series":{
+            "content": () => import('../Pages/api/series.iCrush')
+        },
+        "_default_": "object"
     },
     "course": {
         "content": () => import('../pages/course/index.iCrush')

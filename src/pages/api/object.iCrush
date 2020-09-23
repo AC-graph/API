@@ -1,0 +1,62 @@
+<template>
+  <div class='api-view'>
+    <header id='fixed-top'>
+      绘图对象
+    </header>
+    <p>
+      段落用p标签包裹，如果是
+      <span class='important'>重要的文字</span>
+      就这样
+    </p>
+    <p>
+      如果有列出多项，这样子：
+    </p>
+    <ul>
+      <li>
+        条目1
+      </li>
+      <li>
+        条目2
+      </li>
+      <li>
+        条目3
+      </li>
+    </ul>
+    <p>
+      出现一个地址，比如： <p>
+        <a href="https://github.com/AC-graph/API" target="_blank">点击此次</a>
+      </p>
+    </p>
+    <p>
+      那如果有一段代码怎么办？
+    </p>
+    <pre ui-code>
+// 这是备注
+var ddd=10;
+    </pre>
+    <h2 id='fixed-demo'>
+      一个简单的例子？
+    </h2>
+    <h2 id='fixed-config'>
+      基本配置项
+    </h2>
+    <h1 id='fixed-render'>
+      挂载点和render
+    </h1>
+    <h1 id='fixed-liefcycle'>
+      生命周期
+    </h1>
+  </div>
+</template>
+<script>
+  import changeActive from '../../Service/changeActive.js';
+  import fixedScroll from '../../Service/fixedScroll.js';
+  export default {
+    created() {
+      changeActive('menu-2', 'object');
+    },
+    mounted() {
+      fixedScroll(document.getElementById('api-id'), 44);
+    }
+  };
+</script>
