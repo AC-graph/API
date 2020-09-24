@@ -7,6 +7,9 @@ const pages = {
         "object":{
             "content": () => import('../Pages/api/object.iCrush')
         },
+        "config":{
+            "content": () => import('../Pages/api/config.iCrush')
+        },
         "directive":{
             "content": () => import('../Pages/api/directive.iCrush')
         },

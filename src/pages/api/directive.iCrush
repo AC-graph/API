@@ -1,6 +1,38 @@
 <template>
-  <div>
-    指令
+  <div class='api-view'>
+    <h1 id='fixed-bind'>
+      l-bind
+    </h1>
+    <br>
+    <h5>l-bind使用代码如下：</h5>
+    <pre ui-code>
+      <body id='root'>
+        <div>
+          <circle cx='300' cy='300' radius='100' l-bind:fill-color='fillcolor' l-bind:stroke-color='strokecolor'></circle>
+        </div>
+        &lt;script>
+          var lookview = new LookView({
+              el: document.getElementById('root'),
+              data: function () {
+                  return {
+                    fillcolor: 'aqua',
+                    strokecolor: 'pink'
+              };
+            },
+          })
+        </script>
+</body>
+    </pre>
+    <div class="bindImg"></div>
+    <h1 id='fixed-on'>
+      l-on
+    </h1>
+    <h1 id='fixed-for'>
+      l-for
+    </h1>
+    <h1 id='fixed-if'>
+      l-if
+    </h1>
   </div>
 </template>
 <script>
@@ -15,3 +47,12 @@
     }
   };
 </script>
+<style>
+  .bindImg{
+    background-image: url("../../assets/bindImg.png");
+    height: 1.6rem;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 100%;
+  }
+</style>

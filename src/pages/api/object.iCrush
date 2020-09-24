@@ -1,61 +1,65 @@
 <template>
   <div class='api-view'>
     <header id='fixed-top'>
-      绘图对象
+      新手上路
     </header>
     <p>
-      段落用p标签包裹，如果是
-      <span class='important'>重要的文字</span>
-      就这样
+    <h4>
+      首先，让我们来了解一个这个库主要解决的问题是什么，如何使用以及问题反馈等基本信息。
+    </h4>
     </p>
+    <h1 id='fixed-questions'>
+      关注的问题
+    </h1>
+    <p>提供更友好的数据可视化解决方案</p>
+    <h1 id='fixed-use'>
+      如何引入
+    </h1>
+    <h1 id='fixed-demo'>
+      一个简单的例子
+    </h1>
     <p>
-      如果有列出多项，这样子：
-    </p>
-    <ul>
-      <li>
-        条目1
-      </li>
-      <li>
-        条目2
-      </li>
-      <li>
-        条目3
-      </li>
-    </ul>
-    <p>
-      出现一个地址，比如：
-    <p>
-      <a href="https://github.com/AC-graph/API" target="_blank">点击此次</a>
-    </p>
-    </p>
-    <p>
-      那如果有一段代码怎么办？
+      <span class="important">配置对象</span>
     </p>
     <pre ui-code>
-// 这是备注
-var ddd=10;
+      var lookview = new LookView({      
+        el:document.getElementById('需要挂载的标签id'),
+        data: function () {
+            return {数据};
+        },
+        methods: {方法},
+        .........
+      })
     </pre>
-    <h2 id='fixed-demo'>
-      一个简单的例子？
-    </h2>
     <p>
-      在这里我们简单的说明一下如何进行绘图。
+    <h4>
+      具体的配置请参考绘图对象的<a target="_blank" href="#/api/config?fixed=top">基本配置项</a>。
+    </h4>
     </p>
     <p>
-      <span class="important">添加标签</span>
+      <span class="important">绘图方法</span>
+    <h4>
+      绘图对象配置好了以后，直接使用图形组件即可绘图，我们拿circle举例子。
+    </h4>
     </p>
     <pre ui-code>
-      <circle></circle>
+      <circle cx='40w' cy='300' radius='35' fill-color="pink" stroke-color="aqua"></circle>
     </pre>
-    <h2 id='fixed-config'>
-      基本配置项
-    </h2>
-    <h1 id='fixed-render'>
-      挂载点和render
-    </h1>
-    <h1 id='fixed-liefcycle'>
-      生命周期
-    </h1>
+    <p>
+    <h4>具体的图形组件配置使用请查看<a target="_blank" href="#/api/series?fixed=top">基本图形组件</a>。绘制结果如下：</h4>
+    </p>
+    <div class="circleExample"></div>
+    <p>
+    <h4>怎么样？是不是很简单，虽然直接使用canvas、svg或<a target="_blank"
+        href="https://yelloxing.gitee.io/image2d/#/guide">image2D</a>也可以实现，不过借助这个库绘图会更简单，你可以把更多的精力放在绘制出更有趣的作品上。</h4>
+    </p>
+    <h1 id="fixed-help">获取帮助</h1>
+    <p>
+    <h4>在使用lookview的时候，如果遇到任何疑惑或问题，包括建议或对未来版本的想法，请先在
+      <a href="https://github.com/AC-graph/lookview/issues" target="_blank">Github issue</a>
+      上查找是否存在相似内容，然后进行补充或追问，当然也可以增加新的话题进行交流，除非特殊情况，你会在48小时内获得回复。
+    </h4>
+    </p>
   </div>
 </template>
 <script>
@@ -70,3 +74,12 @@ var ddd=10;
     }
   };
 </script>
+<style>
+  .circleExample {
+    background-image: url("../../assets/circle-example.png");
+    height: 1.6rem;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 100%;
+  }
+</style>

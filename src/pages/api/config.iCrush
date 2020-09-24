@@ -1,0 +1,104 @@
+<template>
+    <div class="api-view">
+        <p>
+        <h4>为了绘图的方便，我们提供了最基本的对象的相关操作。且这些操作是为了绘图而开发的，请知悉。</h4>
+        </p>
+        <h1 id="fixed-mountObj">有挂载点的对象</h1>
+        <p>
+        <h4>所有的绘图操作都是由对象完成的，因此，我们首先来看看如何创建一个对象：</h4>
+        </p>
+        <pre ui-code>
+            var lookview = new LookView({
+                ...
+            });
+        </pre>
+        <h2 id='fixed-config'>
+            基本配置项
+        </h2>
+        <ol>
+            <li>
+                1. el(可选):对象的挂载点
+            </li>
+            <li>
+                2. data：传入对象的数据
+            </li>
+            <li>
+                3. method:图形组件的指令可使用的方法(例如：点击事件)
+            </li>
+            <li>
+                4. 生命周期：这里我们提供6组共12个钩子: 分别作用于创建对象前后，对象和页面关联前后，对象和页面解除关联前后，数据改动前后，画布大小改变导致重绘前后，销毁组件前后。
+            </li>
+        </ol>
+        <h2 id='fixed-render'>
+            挂载点和render
+        </h2>
+
+        <h2 id='fixed-liefcycle'>
+            生命周期
+        </h2>
+        <p>beforeCreate: 解除创建开始前调用执行</p>
+        <pre ui-code>
+            beforeCreate:function()
+        </pre>
+        <p>created: 对象创建完成后调用执行</p>
+        <pre ui-code>
+            created:function()
+        </pre>
+        <p>beforeMount: 对象挂载节点开始前执行</p>
+        <pre ui-code>
+            beforeMount:function()
+        </pre>
+        <p>mounted: 对象挂载节点完成后执行</p>
+        <pre ui-code>
+            mounted:function()
+        </pre>
+        <p>beforeUnmount: 对象解除挂载节点开始前执行</p>
+        <pre ui-code>
+            beforeUnmount:function()
+        </pre>
+        <p>unmounted: 对象解除挂载节点完成后执行</p>
+        <pre ui-code>
+            unmounted:function()
+        </pre>
+        <p>beforeDestroy: 对象销毁前执行</p>
+        <pre ui-code>
+            beforeDestroy:function()
+        </pre>
+        <p>destroyed: 对象销毁后执行</p>
+        <pre ui-code>
+            destroyed:function()
+        </pre>
+        <p>beforeUpdate: 数据改变导致的刷新开始前执行</p>
+        <pre ui-code>
+            beforeUpdate:function()
+        </pre>
+        <p>updated: 数据改变导致的刷新结束后执行</p>
+        <pre ui-code>
+            updated:function()
+        </pre>
+        <p>beforeResize: 屏幕大小改变导致的刷新开始前执行</p>
+        <pre ui-code>
+            beforeResize:function()
+        </pre>
+        <p>resized: 屏幕大小改变导致的刷新结束后执行</p>
+        <pre ui-code>
+            resized:function()
+        </pre>
+        <h1 id="fixed-unmountObj">无挂载点的对象</h1>
+    </div>
+</template>
+<script>
+    import changeActive from '../../Service/changeActive.js';
+    import fixedScroll from '../../Service/fixedScroll.js';
+    export default {
+        created() {
+            changeActive('menu-2', 'config');
+        },
+        mounted() {
+            fixedScroll(document.getElementById('api-id'), 44);
+        }
+    };
+</script>
+<style>
+
+</style>
