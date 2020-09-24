@@ -12,7 +12,7 @@ iCrush.directive('uiCode', {
       el,
 
       // 初始化文本
-      content: code,
+      content: code.replace(/&lt;/g,'<').replace(/&gt;/g,'>'),
 
       // 着色方法
       shader: prettify,

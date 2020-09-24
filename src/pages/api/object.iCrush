@@ -23,9 +23,10 @@
       </li>
     </ul>
     <p>
-      出现一个地址，比如： <p>
-        <a href="https://github.com/AC-graph/API" target="_blank">点击此次</a>
-      </p>
+      出现一个地址，比如：
+    <p>
+      <a href="https://github.com/AC-graph/API" target="_blank">点击此次</a>
+    </p>
     </p>
     <p>
       那如果有一段代码怎么办？
@@ -37,6 +38,15 @@ var ddd=10;
     <h2 id='fixed-demo'>
       一个简单的例子？
     </h2>
+    <p>
+      在这里我们简单的说明一下如何进行绘图。
+    </p>
+    <p>
+      <span class="important">添加标签</span>
+    </p>
+    <pre ui-code>
+      <circle></circle>
+    </pre>
     <h2 id='fixed-config'>
       基本配置项
     </h2>
