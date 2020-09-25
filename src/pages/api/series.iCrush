@@ -29,7 +29,24 @@
     <h1 id='fixed-basic'>
       基本图形组件
     </h1>
+
     <h2 id="fixed-arc">arc</h2>
+    <p>以点(cx,cy)为圆心，内外半径分别是radius1和radius2，从弧度begin开始，跨越deg弧度画弧：</p>
+    <pre ui-code>
+      <arc cx='num' cy='num' radius1='num' radius2='num' begin='num' deg='num' [attributes]></arc>
+    </pre>
+    <p>
+      <ul>
+        <li><span class="important">cx</span>:设置弧心的x坐标，是数字必输类型</li>
+        <li><span class="important">cy</span>:设置弧心的y坐标，是数字必输类型</li>
+        <li><span class="important">radius1</span>:设置弧的内半径，是数字必输类型</li>
+        <li><span class="important">radius2</span>:设置弧的外半径，是数字必输类型</li>
+        <li><span class="important">begin</span>:设置起始弧度，是数字必输类型，单位角度制deg或弧度制pi</li>
+        <li><span class="important">deg</span>:设置跨越弧度，是数字必输类型，单位角度制deg或弧度制pi</li>
+        <li><span class="public">attributes</span>:非必输类型,详细查看<a href="#attr?fixed=attributes">组件常见属性</a></li>
+      </ul>
+    </p>
+
     <h2 id="fixed-circle">circle</h2>
     <p>在点(cx,cy)处，用一种绘图的类型画出一个半径为radius的圆,[]中所含的属性都是可选属性。</p>
     <pre ui-code>
@@ -43,56 +60,54 @@
         <li><span class="public">attributes</span>:非必输类型,详细查看<a href="#attr?fixed=attributes">组件常见属性</a></li>
       </ul>
     </p>
+
     <h2 id="fixed-path">path</h2>
     <p>
-      <h4>path组件略有不同 ，我们将所有绘制路径的子标签都放在path标签下，例如：</h4>
+      path组件略有不同 ，我们将所有绘制路径的子标签都放在path标签下，例如：
     </p>
     <pre ui-code>
-          <path>
+<path>
       <move-to ></move-to>
       <line-to ></line-to>
       <bezier-to></bezier-to>
 </path>
-        </pre>
+    </pre>
     <p>
-      <h4>用户可以先在path标签中配置一些公共的属性，这些公共的属性均为非必输项,除却上面介绍过的，close属性表示是否让路径闭合</h4>
+      用户可以先在path标签中配置一些公共的属性，这些公共的属性均为非必输项,除却上面介绍过的，close属性表示是否让路径闭合
     </p>
     <pre ui-code>
-      <path type='' fill-color='' stroke-color='' line-width=''  close='boolean'>
+<path type='' fill-color='' stroke-color='' line-width=''  close='boolean'>
   
 </path>
     </pre>
     <h4>直线</h4>
     <p>
-      <h4>move-to表示画笔移动到(x,y)</h4>
+      move-to表示画笔移动到(x,y)
     </p>
     <pre ui-code>
       <move-to x="num" y="num"></move-to>
- 
     </pre>
     <p>
-      <h4>line-to表示画一条直线到(x,y)</h4>
+      line-to表示画一条直线到(x,y)
     </p>
     <pre ui-code>
-
 <line-to x="num" y="num"></line-to>
-       
     </pre>
     <h4>贝塞尔曲线</h4>
     <p>
-      <h4>当type为2的时候表示二次贝塞尔曲线</h4>
+      当type为2的时候表示二次贝塞尔曲线
     </p>
     <pre ui-code>
-      <move-to x="num" y="num"></move-to>
+<move-to x="num" y="num"></move-to>
 <bezier-to type='2' cp1x="num" cp1y="num" x="num" y="num" [attributes]></bezier-to>
-</pre>
+    </pre>
     <p>
-      <h4>当type为3的时候表示三次贝塞尔曲线</h4>
+      当type为3的时候表示三次贝塞尔曲线
     </p>
     <pre ui-code>
-      <move-to x="num" y="num"></move-to>
+<move-to x="num" y="num"></move-to>
 <bezier-to type='3' cp1x="num" cp1y="num" cp2x="num" cp2y="num" x="num" y="num" [attributes]></bezier-to>
-</pre>
+    </pre>
 
     <p>
       <ul>
@@ -105,31 +120,31 @@
     </p>
 
     <h2 id="fixed-rect">rect</h2>
+    <p>
+      <p>
+        以(x,y)为左上角，宽width，高height绘制矩形：
+      </p>
+      <pre ui-code>
+<rect x='num' y='num' width='num' height='num' [attributes]></rect>
+    </pre>
+      <p>
+        <ul>
+          <li><span class="important">x</span>:设置矩形左上角顶点的x坐标，是数字必输类型</li>
+          <li><span class="important">y</span>:设置矩形左上角顶点的y坐标，是数字必输类型</li>
+          <li><span class="important">width</span>:设置矩形的宽，是数字必输类型</li>
+          <li><span class="important">height</span>:设置矩形的高，是数字必输类型</li>
+          <li><span class="public">attributes</span>:非必输类型,详细查看<a href="#attr?fixed=attributes">组件常见属性</a></li>
+        </ul>
+      </p>
+    </p>
+
     <h2 id="fixed-text">text</h2>
-
-
-    <h4>绘制文本</h4>
-
     <p>
-      <h4>在点(x, y)处绘制填充的文字text; deg表示文字旋转角度，默认为0pi,非必输</h4>
+      <p>在点(x, y)处绘制文字,文字内容为content; deg表示文字旋转角度，单位角度制deg或弧度制pi,默认为0pi,非必输</p>
     </p>
     <pre ui-code>
-        <text type="fill" x='num' y='num' content='内容' deg="0pi" [attributes]></text> 
-      </pre>
-
-    <p>
-      <h4>在点(x, y)处绘制轮廓的文字text; deg表示文字旋转角度，默认为0pi,非必输</h4>
-    </p>
-    <pre ui-code>
-        <text type="stroke" x='num' y='num' content='内容' deg="0pi" [attributes]></text> 
-      </pre>
-    <p>
-      <h4>在点(x, y)处绘制轮廓并填充的文字text; deg表示文字旋转角度，默认为0pi,非必输</h4>
-    </p>
-    <pre ui-code>
-        <text type="full" x='num' y='num' content='内容' deg="0deg" [attributes]></text> 
-      </pre>
-
+<text x='num' y='num' content='内容' deg="0pi" [attributes]></text> 
+    </pre>
     <p>
       <ul>
         <li><span class="important">x</span>:设置文本的x坐标，是数字必输类型</li>
@@ -142,13 +157,14 @@
     <h1 id='fixed-combine'>
       复杂图形组件
     </h1>
+
     <h2 id="fixed-arcs">arcs</h2>
     <p>
-      <h5>
+      <p>
         以(cx,cy)为圆心，给定radius为刻度尺长度，将传入的数据data转化为多个扇形呈现：
-      </h5>
+      </p>
       <pre ui-code>
-        <arcs cx='num' cy='num' data=[array] radius='num' [attributes]></arcs>
+        <arcs cx='num' cy='num' radius='num' data='array' [attributes]></arcs>
       </pre>
       <p>
         <h4>
@@ -159,51 +175,57 @@
 
     <h2 id="fixed-polarRuler">polar-ruler</h2>
     <p>
-      <h5>以(cx,cy)为极坐标圆心画出极坐标</h5>
+      <p>以(cx,cy)为极坐标圆心画出极坐标</p>
+      <ul>
+        <li><span class="important">cx</span>:设置圆心的x坐标，是数字必输类型</li>
+        <li><span class="important">cy</span>:设置圆心的y坐标，是数字必输类型</li>
+        <li><span class="important">radius</span>:设置刻度外圆的半径，是数字必输类型</li>
+        <li><span class="important">data</span>:设置数据，是二维数组必输类型</li>
+        <li><span class="public">attributes</span>:非必输类型,详细查看<a href="#attr?fixed=attributes">组件常见属性</a></li>
+      </ul>
     </p>
     <pre ui-code>
         <polar-ruler cx='num' cy='num' l-bind:data='textdata' begin='10deg' deg='num' radius='num' data-type='str' [attributes] ></polar-ruler>
       </pre>
     <p>
       <ul>
-
-
         <li><span class="important">cx,cy</span>:极data-type坐标圆心坐标，是数字必输类型</li>
         <li><span class="important">data</span>:极坐标外圈刻度下的数据，为一维数组必输</li>
         <li><span class="important">data-type</span>:极坐标外圈刻度下的数据的类型，有num和str，分别代表数字和字符串，默认是num</li>
         <li><span class="important">begin</span>:极坐标0刻度起始位置单位为deg，是数字必输类型</li>
         <li><span class="important">deg</span>:极坐标所需要跨越的弧度，当值为负时极坐标刻度为逆时针，反之则为顺时针，是数字必输类型</li>
         <li><span class="important">radius</span>:极坐标刻度的半径，是数字必输类型</li>
-
-
         <li><span class="public">attributes</span>:非必输类型,常见属性查看<a href="#attr?fixed=attributes">组件常见属性</a>，此外还有以下属性：
-
         </li>
       </ul>
     </p>
 
-
-
     <h2 id="fixed-rects">rects</h2>
     <p>
-      <h5>
-        以(cx,cy)为圆心，给定radius为刻度尺长度，将传入的数据data转化为多个扇形呈现：
-      </h5>
-      <pre ui-code>
-          <arcs cx='num' cy='num' data=[array] radius='num' [attributes]></arcs>
-        </pre>
       <p>
-        <h4>
-          cx、cy、radius均为数字必输类型，data为二维数组必输类型；attributes为非必输属性，均有默认值。
-        </h4>
+        以(zero-x,zero-y)为原点，给定width、height分别为为x轴、y轴刻度尺长度，将传入的数据data转化为多个扇形呈现：
+      </p>
+      <pre ui-code>
+        <rects zero-x="num" zero-y="num" width="num" height="num" data="array"></rects>
+      </pre>
+      <p>
+        <ul>
+          <li><span class="important">zero-x</span>:设置原点的x坐标，是数字必输类型</li>
+          <li><span class="important">zero-y</span>:设置原点的y坐标，是数字必输类型</li>
+          <li><span class="important">width</span>:设置x轴刻度尺长度，是数字必输类型</li>
+          <li><span class="important">height</span>:设置y轴刻度尺长度，是数字必输类型</li>
+          <li><span class="important">data</span>:设置数据，是二维数组必输类型</li>
+          <li><span class="public">attributes</span>:非必输类型,详细查看<a href="#attr?fixed=attributes">组件常见属性</a></li>
+        </ul>
       </p>
     </p>
+
     <h2 id="fixed-xRuler">x-ruler</h2>
     <p>
-      <h5>以(zero-x,zero-y)为刻度尺原点,width作为长度，画出x轴的刻度尺。</h5>
+      以(zero-x,zero-y)为刻度尺原点,width作为长度，根据data的数据，画出x轴的刻度尺。
     </p>
     <pre ui-code>
-      <x-ruler zero-x='num' zero-y='num' data='array' width='num' [attributes]></x-ruler>
+      <x-ruler zero-x='num' zero-y='num' width='num' data='array' [attributes]></x-ruler>
     </pre>
     <p>
       <ul>
@@ -222,10 +244,10 @@
     </p>
     <h2 id="fixed-yRuler">y-ruler</h2>
     <p>
-      <h5>以(zero-x,zero-y)为刻度尺原点,width作为长度，画出y轴的刻度尺。</h5>
+      以(zero-x,zero-y)为刻度尺原点,width作为长度，根据data的数据，画出y轴的刻度尺。
     </p>
     <pre ui-code>
-        <y-ruler zero-x='num' zero-y='num' data='array' width='num' [attributes]></y-ruler>
+        <y-ruler zero-x='num' zero-y='num' width='num' data='array' [attributes]></y-ruler>
       </pre>
     <p>
       <ul>
