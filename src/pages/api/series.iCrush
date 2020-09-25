@@ -80,7 +80,7 @@
   
 </path>
     </pre>
-    <h5>直线</h5>
+    <h4>直线</h4>
     <p>
       move-to表示画笔移动到(x,y)
     </p>
@@ -93,7 +93,7 @@
     <pre ui-code>
 <line-to x="num" y="num"></line-to>
     </pre>
-    <h5>贝塞尔曲线</h5>
+    <h4>贝塞尔曲线</h4>
     <p>
       当type为2的时候表示二次贝塞尔曲线
     </p>
@@ -108,7 +108,6 @@
 <move-to x="num" y="num"></move-to>
 <bezier-to type='3' cp1x="num" cp1y="num" cp2x="num" cp2y="num" x="num" y="num" [attributes]></bezier-to>
     </pre>
-
     <p>
     <ul>
       <li><span class="important">x</span>:设置文本的x坐标，是数字必输类型</li>
@@ -118,7 +117,6 @@
       <li><span class="public">attributes</span>:非必输类型,详细查看<a href="#attr?fixed=attributes">组件常见属性</a></li>
     </ul>
     </p>
-
     <h2 id="fixed-rect">rect</h2>
     <p>
     <p>
@@ -160,8 +158,8 @@
 
     <h2 id="fixed-arcs">arcs</h2>
     <p>
-      <p>
-        以(cx,cy)为圆心，给定radius为刻度尺长度，将传入的数据data转化为多个扇形呈现：
+    <p>
+      以(cx,cy)为圆心，给定radius为刻度尺长度，将传入的数据data转化为多个扇形呈现：
     </p>
     <pre ui-code>
         <arcs cx='num' cy='num' radius='num' data='array' [attributes]></arcs>
