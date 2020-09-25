@@ -57,9 +57,63 @@
                     <ul>
                         <li>
                             <h4 @click='doScroll("basic")'>基本图形组件</h4>
+                            <ul>
+                                <li>
+                                    <h5 @click='doScroll("arc")'>
+                                        arc
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5 @click='doScroll("circle")'>
+                                        circle
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5 @click='doScroll("path")'>
+                                        path
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5 @click='doScroll("rect")'>
+                                        rect
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5 @click='doScroll("text")'>
+                                        text
+                                    </h5>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <h4 @click='doScroll("combine")'>复杂图形组件</h4>
+                            <ul>
+                                <li>
+                                    <h5 @click='doScroll("arcs")'>
+                                        arcs
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5 @click='doScroll("polarRuler")'>
+                                        polar-ruler
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5 @click='doScroll("rects")'>
+                                        rects
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5 @click='doScroll("xRuler")'>
+                                        x-ruler
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5 @click='doScroll("yRuler")'>
+                                        y-ruler
+                                    </h5>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </li>

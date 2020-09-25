@@ -5,39 +5,42 @@
     </h1>
     <p>动态地绑定一个或多个属性到表达式 (用法和v-bind类似)</p>
     <p>
-      <h5>l-bind使用代码如下：</h5>
+    <h5>l-bind使用代码如下：</h5>
     </p>
     <pre ui-code>
-      <body id='root'>
-        <div>
-          <circle cx='300' cy='300' radius='100' l-bind:fill-color='fillcolor' l-bind:stroke-color='strokecolor'></circle>
-        </div>
-        &lt;script>
-          var lookview = new LookView({
-              el: document.getElementById('root'),
-              data: function () {
-                  return {
-                    fillcolor: 'aqua',
-                    strokecolor: 'pink'
-              };
-            },
-          })
-        </script>
-</body>
+<!-- 绑定属性到表达式 -->
+<circle cx='300' cy='300' radius='100' l-bind:fill-color='fillcolor' l-bind:stroke-color='strokecolor'></circle>
     </pre>
-    <p>
-      <h5>上述代码的运行结果如下所示：</h5>
-    </p>
-    <div class="bindImg"></div>
+    <p>用户可以通过自己的需求更改绑定的数据</p>
     <h1 id='fixed-on'>
       l-on
     </h1>
+    <p>绑定事件监听器。事件类型由参数指定。表达式可以是一个方法的名字或者一个内联语句。用在自定义的标签组件上时，也可以监听子组件触发的自定义事件(例如Path下的子组件)。</p>
+    <h5><span class="important">这里暂时只提供了点击事件与鼠标移入两个事件</span></h5>
+    <pre ui-code>
+<!-- 点击事件 -->
+<circle cx='100' cy='200' radius='50' l-on:click:default='doit'></circle>     
+<!-- 鼠标移入事件 -->
+<circle cx='100' cy='200' radius='50' l-on:mousemove='doit1'></circle>  
+    </pre>
+    <p>这里代码中的default指的是事件的生效区域</p>
     <h1 id='fixed-for'>
       l-for
     </h1>
+    <p>基于源数据多次渲染元素或模板块。该指令必须使用特定的语法：l-for='(value,key) in dataList'，为当前遍历的元素提供别名：</p>
+    <pre ui-code>
+      <text x='10w' l-bind:y='key' l-bind:content='value' l-for='(value, key) in datalist'></text>
+    </pre>
+    <h5><span class="important">该指令优先级最高</span></h5>
     <h1 id='fixed-if'>
       l-if
     </h1>
+    <p>这个指令用于组件的显示或隐藏，此指令的使用方法:l-if="flag",这里的flag是boolean值。</p>
+    <pre ui-code>
+<arc cx='100' cy='400' radius1='30' radius2='50' deg='5' begin='1' fill-color='blue' l-if='flag'></arc>
+<arc cx='100' cy='300' radius1='30' radius2='50' deg='5' begin='1' fill-color='green' l-if='!flag'></arc>
+    </pre>
+    <h5><span class="important">l-if指令必须传一个boolean值，不能直接在l-if中输入true或者false</span></h5>
   </div>
 </template>
 <script>
@@ -52,12 +55,3 @@
     }
   };
 </script>
-<style>
-  .bindImg {
-    background-image: url("../../assets/bindImg.png");
-    height: 1.6rem;
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: auto 100%;
-  }
-</style>
