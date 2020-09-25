@@ -1,5 +1,25 @@
 <template>
   <div class="api-view">
+
+    <p>
+    <h4>
+      不同图形组件的使用大体类似,
+      <span class="important">差异的部分会在具体的图形组件下说明,</span>
+      下面我们来看看图形组件类似属性有哪些：
+    </h4>
+    </p>
+
+    <p>
+    <h5>
+      <ul>
+        <li>fill-color：填充色，默认"#000"。</li>
+        <li>stroke-color：轮廓色，默认"#000"。</li>
+        <li>line-width：线条宽度，默认1(单位px)。</li>
+        <li>dash：设置线条虚线，默认为[]表示使用实线绘制。</li>
+        <li>type：设置绘图的类型，一般默认为full（填充和轮廓同时画出）</li>
+      </ul>
+    </h5>
+    </p>
     <h1 id='fixed-basic'>
       基本图形组件
     </h1>
