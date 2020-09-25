@@ -3,8 +3,10 @@
     <h1 id='fixed-bind'>
       l-bind
     </h1>
-    <br>
-    <h5>l-bind使用代码如下：</h5>
+    <p>动态地绑定一个或多个属性到表达式 (用法和v-bind类似)</p>
+    <p>
+      <h5>l-bind使用代码如下：</h5>
+    </p>
     <pre ui-code>
       <body id='root'>
         <div>
@@ -23,6 +25,9 @@
         </script>
 </body>
     </pre>
+    <p>
+      <h5>上述代码的运行结果如下所示：</h5>
+    </p>
     <div class="bindImg"></div>
     <h1 id='fixed-on'>
       l-on
@@ -48,7 +53,7 @@
   };
 </script>
 <style>
-  .bindImg{
+  .bindImg {
     background-image: url("../../assets/bindImg.png");
     height: 1.6rem;
     background-repeat: no-repeat;

@@ -2,6 +2,7 @@
     <div class='root'>
         <div>
             <h2>基础</h2>
+
             <ul>
                 <li>
                     <h3 @click='openRouter("object")' class='menu-2 object'>新手上路</h3>
@@ -20,22 +21,29 @@
                         </li>
                     </ul>
                 </li>
+
                 <li>
                     <h3 @click='openRouter("config")' class='menu-2 config'>基本配置项</h3>
                     <ul>
                         <li>
                             <h4 @click='doScroll("mountObj")'>有挂载点的对象</h4>
                             <ul>
-                                <li><h5 @click='doScroll("config")'>
-                                    基本配置项
-                                </h5></li>
-                                <li><h5 @click='doScroll("render")'>
-                                    挂载点和render
-                                </h5></li>
-                                <li><h5 @click='doScroll("liefcycle")'>
-                                    生命周期
-                                </h5></li>
-                                
+                                <li>
+                                    <h5 @click='doScroll("config")'>
+                                        基本配置项
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5 @click='doScroll("render")'>
+                                        挂载点和render
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5 @click='doScroll("liefcycle")'>
+                                        生命周期
+                                    </h5>
+                                </li>
+
                             </ul>
                         </li>
                         <li>
@@ -43,6 +51,20 @@
                         </li>
                     </ul>
                 </li>
+
+                <li>
+                    <h3 @click='openRouter("series")' class='menu-2 series'>图形组件</h3>
+                    <ul>
+                        <li>
+                            <h4 @click='doScroll("basic")'>基本图形组件</h4>
+                        </li>
+                        <li>
+                            <h4 @click='doScroll("combine")'>复杂图形组件</h4>
+                        </li>
+                    </ul>
+                </li>
+
+
                 <li>
                     <h3 @click='openRouter("directive")' class='menu-2 directive'>指令</h3>
                     <ul>
@@ -60,9 +82,7 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <h3 @click='openRouter("series")' class='menu-2 series'>基本图形组件</h3>
-                </li>
+
             </ul>
         </div>
         <div id='api-id'>

@@ -1,6 +1,11 @@
 <template>
-  <div>
-    小组件
+  <div class="api-view">
+    <h1 id='fixed-basic'>
+      基本图形组件
+    </h1>
+    <h1 id='fixed-combine'>
+      复杂图形组件
+    </h1>
   </div>
 </template>
 <script>
