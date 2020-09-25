@@ -124,10 +124,10 @@
     </p>
     <h2 id="fixed-xRuler">x-ruler</h2>
     <p>
-    <h5>以(zero-x,zero-y)为刻度尺原点,width作为长度，画出x轴的刻度尺。</h5>
+      以(zero-x,zero-y)为刻度尺原点,width作为长度，根据data的数据，画出x轴的刻度尺。
     </p>
     <pre ui-code>
-      <x-ruler zero-x='num' zero-y='num' data='array' width='num' [attributes]></x-ruler>
+      <x-ruler zero-x='num' zero-y='num' width='num' data='array' [attributes]></x-ruler>
     </pre>
     <p>
     <ul>
@@ -146,10 +146,10 @@
     </p>
     <h2 id="fixed-yRuler">y-ruler</h2>
     <p>
-    <h5>以(zero-x,zero-y)为刻度尺原点,width作为长度，画出y轴的刻度尺。</h5>
+      以(zero-x,zero-y)为刻度尺原点,width作为长度，根据data的数据，画出y轴的刻度尺。
     </p>
     <pre ui-code>
-        <y-ruler zero-x='num' zero-y='num' data='array' width='num' [attributes]></y-ruler>
+        <y-ruler zero-x='num' zero-y='num' width='num' data='array' [attributes]></y-ruler>
       </pre>
     <p>
     <ul>
