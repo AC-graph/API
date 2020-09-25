@@ -24,6 +24,19 @@
       基本图形组件
     </h1>
     <h2 id="fixed-arc">arc</h2>
+    <p>
+    <h5>
+      以(x,y)为左上角，宽width，高height绘制矩形：
+    </h5>
+    <pre ui-code>
+        <rect x='num' y='num' width='num' height='num' [attributes]></rect>
+      </pre>
+    <p>
+    <h4>
+      x、y、width、height的值均为数字必输类型；attributes为非必输属性，均有默认值。
+    </h4>
+    </p>
+    </p>
     <h2 id="fixed-circle">circle</h2>
     <h2 id="fixed-path">path</h2>
     <h2 id="fixed-rect">rect</h2>
@@ -32,8 +45,34 @@
       复杂图形组件
     </h1>
     <h2 id="fixed-arcs">arcs</h2>
+    <p>
+    <h5>
+      以(cx,cy)为圆心，给定radius为刻度尺长度，将传入的数据data转化为多个扇形呈现：
+    </h5>
+    <pre ui-code>
+        <arcs cx='num' cy='num' data=[array] radius='num' [attributes]></arcs>
+      </pre>
+    <p>
+    <h4>
+      cx、cy、radius均为数字必输类型，data为二维数组必输类型；attributes为非必输属性，均有默认值。
+    </h4>
+    </p>
+    </p>
     <h2 id="fixed-polarRuler">polar-ruler</h2>
     <h2 id="fixed-rects">rects</h2>
+    <p>
+    <h5>
+      以(cx,cy)为圆心，给定radius为刻度尺长度，将传入的数据data转化为多个扇形呈现：
+    </h5>
+    <pre ui-code>
+          <arcs cx='num' cy='num' data=[array] radius='num' [attributes]></arcs>
+        </pre>
+    <p>
+    <h4>
+      cx、cy、radius均为数字必输类型，data为二维数组必输类型；attributes为非必输属性，均有默认值。
+    </h4>
+    </p>
+    </p>
     <h2 id="fixed-xRuler">x-ruler</h2>
     <h2 id="fixed-yRuler">y-ruler</h2>
   </div>
