@@ -30,19 +30,6 @@
       基本图形组件
     </h1>
     <h2 id="fixed-arc">arc</h2>
-    <p>
-      <h5>
-        以(x,y)为左上角，宽width，高height绘制矩形：
-      </h5>
-      <pre ui-code>
-        <rect x='num' y='num' width='num' height='num' [attributes]></rect>
-      </pre>
-      <p>
-        <h4>
-          x、y、width、height的值均为数字必输类型；attributes为非必输属性，均有默认值。
-        </h4>
-      </p>
-    </p>
     <h2 id="fixed-circle">circle</h2>
     <p>在点(cx,cy)处，用一种绘图的类型画出一个半径为radius的圆,[]中所含的属性都是可选属性。</p>
     <pre ui-code>
@@ -140,7 +127,7 @@
       <h4>在点(x, y)处绘制轮廓并填充的文字text; deg表示文字旋转角度，默认为0pi,非必输</h4>
     </p>
     <pre ui-code>
-        <text type="full" x='num' y='num' content='内容' deg="0pi" [attributes]></text> 
+        <text type="full" x='num' y='num' content='内容' deg="0deg" [attributes]></text> 
       </pre>
 
     <p>
@@ -169,9 +156,32 @@
         </h4>
       </p>
     </p>
+
     <h2 id="fixed-polarRuler">polar-ruler</h2>
-       <p><h4>极坐标刻度尺</h4></p>
-  
+    <p>
+      <h5>以(cx,cy)为极坐标圆心画出极坐标</h5>
+    </p>
+    <pre ui-code>
+        <polar-ruler cx='num' cy='num' l-bind:data='textdata' begin='10deg' deg='num' radius='num' data-type='str' [attributes] ></polar-ruler>
+      </pre>
+    <p>
+      <ul>
+
+
+        <li><span class="important">cx,cy</span>:极data-type坐标圆心坐标，是数字必输类型</li>
+        <li><span class="important">data</span>:极坐标外圈刻度下的数据，为一维数组必输</li>
+        <li><span class="important">data-type</span>:极坐标外圈刻度下的数据的类型，有num和str，分别代表数字和字符串，默认是num</li>
+        <li><span class="important">begin</span>:极坐标0刻度起始位置单位为deg，是数字必输类型</li>
+        <li><span class="important">deg</span>:极坐标所需要跨越的弧度，当值为负时极坐标刻度为逆时针，反之则为顺时针，是数字必输类型</li>
+        <li><span class="important">radius</span>:极坐标刻度的半径，是数字必输类型</li>
+
+
+        <li><span class="public">attributes</span>:非必输类型,常见属性查看<a href="#attr?fixed=attributes">组件常见属性</a>，此外还有以下属性：
+
+        </li>
+      </ul>
+    </p>
+
 
 
     <h2 id="fixed-rects">rects</h2>
@@ -189,7 +199,49 @@
       </p>
     </p>
     <h2 id="fixed-xRuler">x-ruler</h2>
+    <p>
+      <h5>以(zero-x,zero-y)为刻度尺原点,width作为长度，画出x轴的刻度尺。</h5>
+    </p>
+    <pre ui-code>
+      <x-ruler zero-x='num' zero-y='num' data='array' width='num' [attributes]></x-ruler>
+    </pre>
+    <p>
+      <ul>
+        <li><span class="important">zero-x</span>:设置原点的x坐标，是数字必输类型</li>
+        <li><span class="important">zero-y</span>:设置原点的y坐标，是数字必输类型</li>
+        <li><span class="important">width</span>:设置刻度尺总长度，是数字必输类型</li>
+        <li><span class="important">data</span>:刻度尺所要表示的数据，是一维数组必输类型</li>
+        <li><span class="public">attributes</span>:非必输类型,常见属性查看<a href="#attr?fixed=attributes">组件常见属性</a>，此外还有以下属性：
+          <ul>
+            <li><span class="private">zero</span>:非必输项，选择是否将原点绘制出来，默认true</li>
+            <li><span class="private">drant</span>:非必输项，选择刻度尺的象限，默认1</li>
+            <li><span class="private">data-type</span>:非必输项，选择传入的数据类型，默认num</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
     <h2 id="fixed-yRuler">y-ruler</h2>
+    <p>
+      <h5>以(zero-x,zero-y)为刻度尺原点,width作为长度，画出y轴的刻度尺。</h5>
+    </p>
+    <pre ui-code>
+        <y-ruler zero-x='num' zero-y='num' data='array' width='num' [attributes]></y-ruler>
+      </pre>
+    <p>
+      <ul>
+        <li><span class="important">zero-x</span>:设置原点的x坐标，是数字必输类型</li>
+        <li><span class="important">zero-y</span>:设置原点的y坐标，是数字必输类型</li>
+        <li><span class="important">width</span>:设置刻度尺总长度，是数字必输类型</li>
+        <li><span class="important">data</span>:刻度尺所要表示的数据，是一维数组必输类型</li>
+        <li><span class="public">attributes</span>:非必输类型,常见属性查看<a href="#attr?fixed=attributes">组件常见属性</a>，此外还有以下属性：
+          <ul>
+            <li><span class="private">zero</span>:非必输项，选择是否将原点绘制出来，默认true</li>
+            <li><span class="private">drant</span>:非必输项，选择刻度尺的象限，默认1</li>
+            <li><span class="private">data-type</span>:非必输项，选择传入的数据类型，默认num</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
   </div>
 </template>
 <script>
@@ -204,3 +256,10 @@
     }
   };
 </script>
+<style>
+  .private {
+    color: green;
+    font-weight: 800;
+    padding: 0 10px 0 50px;
+  }
+</style>
