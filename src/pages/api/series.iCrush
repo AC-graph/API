@@ -37,7 +37,7 @@
       <li><span class="important">cx</span>:设置圆心的x坐标，是数字必输类型</li>
       <li><span class="important">cy</span>:设置圆心的y坐标，是数字必输类型</li>
       <li><span class="important">radius</span>:设置圆的半径，是数字必输类型</li>
-      <li><span class="public">attributes</span>:非必输类型,详细查看<a href="#attr?fixed=attributes">共有属性</a></li>
+      <li><span class="public">attributes</span>:非必输类型,详细查看<a href="#attr?fixed=attributes">组件共有属性</a></li>
     </ul>
     </p>
     <h2 id="fixed-path">path</h2>
