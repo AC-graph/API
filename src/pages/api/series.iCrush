@@ -1,6 +1,9 @@
 <template>
   <div class="api-view">
-
+    <h1 id="fixed-attributes">
+      组件共有属性
+      <a id="attr?fixed=attributes"></a>
+    </h1>
     <p>
     <h4>
       不同图形组件的使用大体类似,
@@ -25,6 +28,18 @@
     </h1>
     <h2 id="fixed-arc">arc</h2>
     <h2 id="fixed-circle">circle</h2>
+    <p>在点(cx,cy)处，用一种绘图的类型画出一个半径为radius的圆,[]中所含的属性都是可选属性。</p>
+    <pre ui-code>
+<circle cx='num' cy='num' radius='num' [attributes]></circle>
+    </pre>
+    <p>
+    <ul>
+      <li><span class="important">cx</span>:设置圆心的x坐标，是数字必输类型</li>
+      <li><span class="important">cy</span>:设置圆心的y坐标，是数字必输类型</li>
+      <li><span class="important">radius</span>:设置圆的半径，是数字必输类型</li>
+      <li><span class="public">attributes</span>:非必输类型,详细查看<a href="#attr?fixed=attributes">共有属性</a></li>
+    </ul>
+    </p>
     <h2 id="fixed-path">path</h2>
     <h2 id="fixed-rect">rect</h2>
     <h2 id="fixed-text">text</h2>

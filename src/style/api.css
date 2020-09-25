@@ -43,6 +43,12 @@
   padding: 0 10px;
 }
 
+.api-view .public {
+  color: gold;
+  font-weight: 800;
+  padding: 0 10px;
+}
+
 .api-view a {
   color: #711e32;
   font-weight: 800;
