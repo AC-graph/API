@@ -171,9 +171,49 @@
     </p>
 
     <h2 id="fixed-xRuler">x-ruler</h2>
-
+    <p>
+    <h5>以(zero-x,zero-y)为刻度尺原点,width作为长度，画出x轴的刻度尺。</h5>
+    </p>
+    <pre ui-code>
+      <x-ruler zero-x='num' zero-y='num' data='array' width='num' [attributes]></x-ruler>
+    </pre>
+    <p>
+    <ul>
+      <li><span class="important">zero-x</span>:设置原点的x坐标，是数字必输类型</li>
+      <li><span class="important">zero-y</span>:设置原点的y坐标，是数字必输类型</li>
+      <li><span class="important">width</span>:设置刻度尺总长度，是数字必输类型</li>
+      <li><span class="important">data</span>:刻度尺所要表示的数据，是一维数组必输类型</li>
+      <li><span class="public">attributes</span>:非必输类型,常见属性查看<a href="#attr?fixed=attributes">组件常见属性</a>，此外还有以下属性：
+        <ul>
+          <li><span class="private">zero</span>:非必输项，选择是否将原点绘制出来，默认true</li>
+          <li><span class="private">drant</span>:非必输项，选择刻度尺的象限，默认1</li>
+          <li><span class="private">data-type</span>:非必输项，选择传入的数据类型，默认num</li>
+        </ul>
+      </li>
+    </ul>
+    </p>
     <h2 id="fixed-yRuler">y-ruler</h2>
-
+    <p>
+    <h5>以(zero-x,zero-y)为刻度尺原点,width作为长度，画出y轴的刻度尺。</h5>
+    </p>
+    <pre ui-code>
+        <y-ruler zero-x='num' zero-y='num' data='array' width='num' [attributes]></y-ruler>
+      </pre>
+    <p>
+    <ul>
+      <li><span class="important">zero-x</span>:设置原点的x坐标，是数字必输类型</li>
+      <li><span class="important">zero-y</span>:设置原点的y坐标，是数字必输类型</li>
+      <li><span class="important">width</span>:设置刻度尺总长度，是数字必输类型</li>
+      <li><span class="important">data</span>:刻度尺所要表示的数据，是一维数组必输类型</li>
+      <li><span class="public">attributes</span>:非必输类型,常见属性查看<a href="#attr?fixed=attributes">组件常见属性</a>，此外还有以下属性：
+        <ul>
+          <li><span class="private">zero</span>:非必输项，选择是否将原点绘制出来，默认true</li>
+          <li><span class="private">drant</span>:非必输项，选择刻度尺的象限，默认1</li>
+          <li><span class="private">data-type</span>:非必输项，选择传入的数据类型，默认num</li>
+        </ul>
+      </li>
+    </ul>
+    </p>
   </div>
 </template>
 <script>
@@ -188,3 +228,10 @@
     }
   };
 </script>
+<style>
+  .private {
+    color: green;
+    font-weight: 800;
+    padding: 0 10px 0 50px;
+  }
+</style>
