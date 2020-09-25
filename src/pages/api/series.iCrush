@@ -106,9 +106,9 @@
 
     <h2 id="fixed-rect">rect</h2>
     <p>
-    <h5>
+    <p>
       以(x,y)为左上角，宽width，高height绘制矩形：
-    </h5>
+    </p>
     <pre ui-code>
           <rect x='num' y='num' width='num' height='num' [attributes]></rect>
         </pre>
@@ -131,17 +131,17 @@
 
     <h2 id="fixed-arcs">arcs</h2>
     <p>
-    <h5>
+    <p>
       以(cx,cy)为圆心，给定radius为刻度尺长度，将传入的数据data转化为多个扇形呈现：
-    </h5>
+    </p>
     <pre ui-code>
-        <arcs cx='num' cy='num' data='array' radius='num' [attributes]></arcs>
+        <arcs cx='num' cy='num' radius='num' data='array' [attributes]></arcs>
       </pre>
     <p>
     <ul>
       <li><span class="important">cx</span>:设置圆心的x坐标，是数字必输类型</li>
       <li><span class="important">cy</span>:设置圆心的y坐标，是数字必输类型</li>
-      <li><span class="important">radius</span>:设置圆的半径，是数字必输类型</li>
+      <li><span class="important">radius</span>:设置刻度外圆的半径，是数字必输类型</li>
       <li><span class="important">data</span>:设置数据，是二维数组必输类型</li>
       <li><span class="public">attributes</span>:非必输类型,详细查看<a href="#attr?fixed=attributes">组件常见属性</a></li>
     </ul>
@@ -152,11 +152,11 @@
 
     <h2 id="fixed-rects">rects</h2>
     <p>
-    <h5>
-      以(cx,cy)为圆心，给定radius为刻度尺长度，将传入的数据data转化为多个扇形呈现：
-    </h5>
+    <p>
+      以(zero-x,zero-y)为原点，给定width、height分别为为x轴、y轴刻度尺长度，将传入的数据data转化为多个扇形呈现：
+    </p>
     <pre ui-code>
-        <rects data="array" zero-x="num" zero-y="num" width="num" height="num"></rects>
+        <rects zero-x="num" zero-y="num" width="num" height="num" data="array"></rects>
       </pre>
     <p>
     <ul>
